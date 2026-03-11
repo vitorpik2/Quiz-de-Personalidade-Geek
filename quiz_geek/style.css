@@ -1,0 +1,404 @@
+/* ========== ESTILOS GERAIS ========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    max-width: 700px;
+    width: 100%;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== TÍTULOS ========== */
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 i {
+    font-size: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+h2 {
+    color: #764ba2;
+    margin: 20px 0 10px 0;
+    font-size: 1.2em;
+}
+
+h3 {
+    color: #667eea;
+    margin: 20px 0 15px 0;
+    font-size: 1.1em;
+}
+
+h2 i,
+h3 i {
+    margin-right: 8px;
+}
+
+.descricao {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+.progress {
+    text-align: center;
+    color: #999;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+/* ========== BOAS-VINDAS ========== */
+
+.welcome-message {
+    background-color: #e8f5e9;
+    border-left: 4px solid #4caf50;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.welcome-message p {
+    color: #2e7d32;
+    margin: 5px 0;
+}
+
+/* ========== FORMULÁRIOS ========== */
+
+.quiz-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.form-group input[type="text"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102,126,234,0.3);
+}
+
+/* ========== PERGUNTAS ========== */
+
+.pergunta {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+}
+
+.pergunta p {
+    margin: 10px 0 15px 0;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.radio-label:hover {
+    border-color: #667eea;
+    background-color: #f0f4ff;
+}
+
+.radio-label input {
+    margin-right: 12px;
+}
+
+/* ========== BOTÕES ========== */
+
+.btn-inicio,
+.btn-submit,
+.btn-jogar-novamente,
+.btn-voltar {
+
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 1.05em;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-inicio {
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    color: white;
+    width: 100%;
+}
+
+.btn-submit {
+    background: #4caf50;
+    color: white;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background:#45a049;
+}
+
+.btn-jogar-novamente {
+    background:#2196F3;
+    color:white;
+}
+
+.btn-jogar-novamente:hover {
+    background:#1976d2;
+}
+
+.btn-voltar {
+    background:#9c27b0;
+    color:white;
+}
+
+.btn-voltar:hover {
+    background:#7b1fa2;
+}
+
+.btn-inicio i,
+.btn-submit i,
+.btn-jogar-novamente i,
+.btn-voltar i {
+    margin-right:8px;
+}
+
+/* ========== RESULTADO ========== */
+
+.resultado-container {
+    background: linear-gradient(to bottom,white,#f5f5f5);
+}
+
+.info-jogador {
+
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.info-jogador p {
+    margin:8px 0;
+}
+
+.perfil-resultado {
+
+    background:#fff3e0;
+    border-left:5px solid #ff9800;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.perfil-resultado h2 {
+    color:#e65100;
+}
+
+.perfil-resultado i {
+    margin-right:8px;
+    color:#ff9800;
+}
+
+/* ========== RANKING ========== */
+
+.ranking {
+    margin:30px 0;
+}
+
+.tabela-ranking {
+
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.tabela-ranking thead {
+
+    background:#667eea;
+    color:white;
+}
+
+.tabela-ranking th,
+.tabela-ranking td {
+
+    padding:15px;
+    text-align:left;
+}
+
+.tabela-ranking tbody tr:hover {
+    background:#f9f9f9;
+}
+
+.tabela-ranking i {
+
+    margin-right:6px;
+    color:#667eea;
+}
+
+.tabela-ranking tbody tr:first-child {
+
+    background:#f3f6ff;
+    font-weight:bold;
+}
+
+/* ========== BARRA DE PROGRESSO ========== */
+
+.barra-progresso {
+
+    background:#e0e0e0;
+    border-radius:10px;
+    overflow:hidden;
+    height:8px;
+    min-width:100px;
+}
+
+.progresso {
+
+    background:linear-gradient(90deg,#667eea,#764ba2);
+    height:100%;
+    transition:width 0.6s ease;
+    box-shadow:0 0 6px rgba(102,126,234,0.6);
+}
+
+/* ========== BOTÕES DE AÇÃO ========== */
+
+.botoes-acao {
+
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.btn-jogar-novamente,
+.btn-voltar {
+
+    flex:1;
+    min-width:150px;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+@media (max-width:600px){
+
+.container{
+padding:25px;
+}
+
+h1{
+font-size:1.5em;
+}
+
+.perfil-resultado h2{
+font-size:1.2em;
+}
+
+.botoes-acao{
+flex-direction:column;
+}
+
+.btn-jogar-novamente,
+.btn-voltar{
+width:100%;
+}
+
+.tabela-ranking{
+font-size:0.9em;
+}
+
+}
+
+@media (max-width:400px){
+
+.container{
+padding:20px;
+border-radius:10px;
+}
+
+h1{
+font-size:1.3em;
+}
+
+.radio-label{
+padding:10px;
+font-size:0.9em;
+}
+
+}
