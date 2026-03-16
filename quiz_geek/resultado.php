@@ -91,35 +91,40 @@ $perfilInfo = array(
         "titulo" => "RPG - O Aventureiro",
         "icone" => "<i class='fa-solid fa-hat-wizard'></i>",
         "descricao" => "Você é um explorador de mundos imersivos! Ama histórias épicas e aventuras memoráveis.",
-        "cores" => "#8b5a8e"
+        "cores" => "#8b5a8e",
+        "imagem" => "img/rpg.avif"
     ),
 
     "fps" => array(
         "titulo" => "FPS - O Atirador",
         "icone" => "<i class='fa-solid fa-crosshairs'></i>",
         "descricao" => "Adrenalina pura! Reflexos rápidos e combate intenso fazem parte do seu estilo.",
-        "cores" => "#d32f2f"
+        "cores" => "#d32f2f",
+        "imagem" => "img/fps.jpeg"
     ),
 
     "puzzle" => array(
         "titulo" => "Puzzle - O Estrategista",
         "icone" => "<i class='fa-solid fa-puzzle-piece'></i>",
         "descricao" => "Desafios mentais e lógica são seu território favorito.",
-        "cores" => "#1976d2"
+        "cores" => "#1976d2",
+        "imagem" => "img/Puzzle.jpg"
     ),
 
     "sports" => array(
         "titulo" => "Sports - O Campeão",
         "icone" => "<i class='fa-solid fa-futbol'></i>",
         "descricao" => "Competição, ranking e vitória são o que te motivam.",
-        "cores" => "#f57c00"
+        "cores" => "#f57c00",
+        "imagem" => "img/sports.png"
     ),
 
     "strategy" => array(
         "titulo" => "Strategy - O General",
         "icone" => "<i class='fa-solid fa-chess'></i>",
         "descricao" => "Planejamento e tática são suas maiores armas.",
-        "cores" => "#388e3c"
+        "cores" => "#388e3c",
+        "imagem" => "img/strategy.png"
     )
 
 );
@@ -159,6 +164,8 @@ Resultado do Quiz
 <?php echo $perfilAtual["icone"]; ?>
 <?php echo $perfilAtual["titulo"]; ?>
 </h2>
+
+<img src="<?php echo $perfilAtual["imagem"]; ?>" alt="Imagem de <?php echo $perfilAtual["titulo"]; ?>" class="perfil-resultado-img">
 
 <p class="descricao-perfil">
 <?php echo $perfilAtual["descricao"]; ?>
